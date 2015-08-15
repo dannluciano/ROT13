@@ -5,21 +5,20 @@
 First compile the project with:
 
 ```
-make
+$ make
 ```
 
 Then run the ROT13 algorithm with options:
 
 ```
-./rot13 with a little text
+$ ./rot13 with a little text
+# jvgu n yvggyr grkg 
 
-# or
+$ ./rot13 < test.txt
+# Jul qvq gur puvpxra pebff gur ebnq?
 
-./rot13 < test.txt
-
-# or
-
-echo "Why did the chicken cross the road?" | ./rot13
+$ echo "Jul qvq gur puvpxra pebff gur ebnq?" | ./rot13
+# Why did the chicken cross the road?
 
 ```
 
