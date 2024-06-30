@@ -8,7 +8,7 @@ int main(int argc, const char *argv[])
   if (argc > 1) {
     for (int i = 1; i < argc; i++) {
       int length = strlen(argv[i]);
-      char * strclone = calloc(sizeof(char), length);
+      char * strclone = (char*) calloc(sizeof(char), length);
       strcpy(strclone, argv[i]);
 
       srot13(strclone);
