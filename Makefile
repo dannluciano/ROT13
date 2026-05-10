@@ -1,10 +1,14 @@
 all: rot13
 
+run: rot13
+	echo test.txt | ./$^
+
 rot13: rot13.o main.c
 	$(CC) $(CFLAGS) $^ -o $@
 
 test: rot13.o test.c
 	$(CC) $(CFLAGS) $^ -o $@
+	./$(@)
 
 rot13.o: rot13.c
 	$(CC) $(CFLAGS) -c $< -o $@
